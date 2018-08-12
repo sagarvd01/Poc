@@ -1,14 +1,15 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<input id="url" />
-		<button id="btn">Submit</button>
+		<button id="btn" type="button">Submit</button>
 		<div id="result"></div>
 		<script>
 			$('#btn').on('click',() =>{
+				console.log($('#url').val());
 				$.ajax({
 					type:"GET",
 					url : $('#url').val(),
