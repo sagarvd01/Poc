@@ -11,11 +11,11 @@
 			$('#btn').on('click',() =>{
 				$.ajax({
 					type:"GET",
-					url : $('url').val(),
+					url : $('#url').val(),
 					xhrFields:{
 						withCredentials: true
 					},
-					success:(data)=> $('result').text(data)
+					success:(data)=> $('#result').text(data)
 				});
 			});
 		</script>
