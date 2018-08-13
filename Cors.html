@@ -27,7 +27,7 @@
 				console.log($('#urlwoc').val());
 				$.ajax({
 					type:"GET",
-					url : $('#url').val(),
+					url : $('#urlwoc').val(),
 					success:(data)=> $('#result').text(data)
 				});
 			});
