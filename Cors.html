@@ -6,6 +6,9 @@
 	<body>
 		<input id="url" />
 		<button id="btn" type="button">Submit</button>
+		<input id="urlwoc" />
+		<button id="btnwoc" type="button">Submit</button>
+		<div id="result"></div>
 		<div id="result"></div>
 		<script>
 			$('#btn').on('click',() =>{
@@ -16,6 +19,15 @@
 					xhrFields:{
 						withCredentials: true
 					},
+					success:(data)=> $('#result').text(data)
+				});
+			});
+			//woc -> without credentials
+			$('#btnwoc').on('click',() =>{
+				console.log($('#urlwoc').val());
+				$.ajax({
+					type:"GET",
+					url : $('#url').val(),
 					success:(data)=> $('#result').text(data)
 				});
 			});
