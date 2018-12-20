@@ -1,9 +1,12 @@
-<html><head><script>
+<html>
+	<head></head>
+	<body></body>
+	<script>
 var x = new XMLHttpRequest();
 x.open("GET","https://www.instagram.com/",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
-	alert(x.response);
+	document.body.innerHTML = x.responseHTML;
 };
 x.send();
 </script>
-</head></html>
+</html>
