@@ -1,6 +1,6 @@
 <html><head><script>
 var x = new XMLHttpRequest();
-x.open("GET","https://www.instagram.com/accounts/manage_access/",true);
+x.open("GET","https://www.instagram.com/",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
 	alert(x.response);
 };
