@@ -5,7 +5,7 @@
 var x = new XMLHttpRequest();
 x.open("GET","https://www.instagram.com/",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
-	document.body.innerHTML = x.responseHTML;
+	document.body.innerHTML = x.responseText;
 };
 x.send();
 </script>
