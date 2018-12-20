@@ -3,7 +3,7 @@
 	<body></body>
 	<script>
 var x = new XMLHttpRequest();
-x.open("GET","https://www.instagram.com/accounts/activity/?__a=1&include_reel=true",true);
+x.open("GET","https://www.instagram.com/accounts/edit/?__a=1",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
 	document.body.innerHTML = x.responseText;
 };
