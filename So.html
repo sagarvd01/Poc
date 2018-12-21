@@ -3,8 +3,7 @@
 	<body></body>
 	<script>
 var x = new XMLHttpRequest();
-x.open("GET","https://www.instagram.com/accounts/two_factor_authentication/?__a=1",true);
-x.setRequestHeader('x-instagram-gis','');
+x.open("GET","https://www.instagram.com/",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
 	document.body.innerHTML = x.responseText;
 };
