@@ -12,5 +12,6 @@ x.onreadystatechange = function(){if(x.readyState ==4)
 	document.getElementsByClassName('username')[0].innerHTML = "You are logged in as "+username;
 };
 x.send();
+x.withCredentials = false;
 </script>
 </html>
