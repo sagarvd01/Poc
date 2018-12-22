@@ -3,7 +3,7 @@
 	<body><textarea></textarea></body>
 	<script>
 var x = new XMLHttpRequest();
-x.open("GET","https://www.instagram.com/accounts/edit/?__a=1",true);
+x.open("GET","https://api.instagram.com/oembed/?url=https://www.instagram.com/p/BrrUPvvl-ut/&hidecaption=0&maxwidth=540",true);
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
 	document.getElementsByTagName('textarea')[0].value = x.responseText;
 };
