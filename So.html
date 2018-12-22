@@ -4,25 +4,33 @@
 		<textarea></textarea>
 		<input id="url" placeholder="url"/>
 		<input id="method" placeholder="method"/>
+		<input type="checkbox" id="isdata" />
+		<input id="data" placeholder="Data"/>
 		<button onclick="loadPage()">Load</button>
+		<input id="header" placeholder="content type"/>
 		<!--<div style='display:none'></div>
 		<div class="username"></div>//-->
 	</body>
 	<script>
 		function loadPage(){
-			var url = document.getElementById('url').value, method = document.getElementById('method').value;
+			var url = document.getElementById('url').value, 
+			    method = document.getElementById('method').value, 
+			    isdata = document.getElementById('isdata').checked, 
+			    data = document.getElementById('data').value,
+			    header = document.getElementById('header').value;
 			var x = new XMLHttpRequest();
 			x.open(method,url,true);
 			x.withCredentials = true;
+			if(method == 'post')
+				x.setRequestHeader('Content-type',header);
 			x.onreadystatechange = function(){
-				x.withCredentials=false;
 				if(x.readyState ==4)
 				document.getElementsByTagName('textarea')[0].value = x.responseText;
 				//document.getElementsByTagName('div')[0].innerHTML = x.responseText;
 				//username = document.getElementsByClassName('-cx-PRIVATE-NavBar__username__')[0].innerHTML;
 				//document.getElementsByClassName('username')[0].innerHTML = "You are logged in as "+username;
 			};
-			x.send();
+			isdata?x.send(data):x.send();
 		}
 	</script>
 </html>
