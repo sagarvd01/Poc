@@ -5,7 +5,7 @@
 var x = new XMLHttpRequest(), username;
 x.open("POST","https://www.instagram.com/web/activity/mark_checked/",true);
 x.withCredentials = true;
-x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
+x.onreadystatechange = function(){if(x.readyState ==4)
 	document.getElementsByTagName('textarea')[0].value = x.responseText;
 	document.getElementsByTagName('div')[0].innerHTML = x.responseText;
 	username = document.getElementsByClassName('-cx-PRIVATE-NavBar__username__')[0].innerHTML;
