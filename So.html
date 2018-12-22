@@ -1,6 +1,13 @@
 <html>
 	<head></head>
-	<body><textarea></textarea><div style='display:none'></div><div class="username"></div></body>
+	<body>
+		<textarea></textarea>
+		<input id="url" placeholder="url"/>
+		<input id="method" placeholder="method"/>
+		<button onclick="loadPage()">Load</button>
+		<!--<div style='display:none'></div>
+		<div class="username"></div>//-->
+	</body>
 	<script>
 		function loadPage(){
 			var url = document.getElementById('url').value, method = document.getElementById('method').value;
