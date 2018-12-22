@@ -4,6 +4,7 @@
 	<script>
 var x = new XMLHttpRequest();
 x.open("GET","https://api.instagram.com/oembed/?url=https://www.instagram.com/p/BrrUPvvl-ut/&hidecaption=0&maxwidth=540",true);
+x.withCredentials = true;
 x.onreadystatechange = function(){if(x.status==200 && x.readyState ==4)
 	document.getElementsByTagName('textarea')[0].value = x.responseText;
 };
